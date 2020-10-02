@@ -7,6 +7,7 @@ use FondOfSpryker\Glue\ProductListCompaniesRestApi\Processor\Expander\CustomerEx
 use FondOfSpryker\Glue\ProductListCompaniesRestApi\ProductListCompaniesRestApiFactory;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface;
+use Spryker\Glue\Kernel\AbstractFactory;
 
 class ProductListCustomerExpanderPluginTest extends Unit
 {
@@ -73,9 +74,9 @@ class ProductListCustomerExpanderPluginTest extends Unit
             }
 
             /**
-             * @return \FondOfSpryker\Glue\ProductListCompaniesRestApi\ProductListCompaniesRestApiFactory
+             * @return \Spryker\Glue\Kernel\AbstractFactory
              */
-            public function getFactory(): ProductListCompaniesRestApiFactory
+            protected function getFactory(): AbstractFactory
             {
                 return $this->productListCompaniesRestApiFactory;
             }
